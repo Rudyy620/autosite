@@ -40,40 +40,33 @@
         U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-$border:#ddd;
-$stripe:#F9F9F9;
-
-.table {
-  display: table;
-  border-collapse: collapse;
-  .tr {    
-    display: table-row;
-    border: 1px solid $border;
-    &:first-child {
-      font-weight:bold;
-      border-bottom:2px solid $border;
-    }
-    &:nth-child(even) {
-      background-color:$stripe;
-    }
-    .td {
-      display: table-cell;
-      padding: 8px;
-      border-left: 1px solid $border;
-      &:first-child {
-        border-left:0;
-      }      
-    }
-  }
+/* DivTable.com */
+.divTable{
+	display: table;
+	width: 100%;
 }
-
-
-/* Not necessary for table styling */
-.div-table, .table-tag {
-  float:left;
-  margin:2em;
-  .title {
-    text-align:center;
-    padding-bottom:.5em;
-  }
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
 }
